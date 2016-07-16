@@ -1,1 +1,24 @@
 /* Empty. Add your own CSS if you like */
+
+/* Style */
+
+.center{
+  text-align: center;
+}
+
+/* index */
+
+/* login */
+
+.button{
+  border:1px solid #aaa;
+  border-radius: 5px;
+  margin:10px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.login{
+  max-width: 200px;
+  margin:0 auto;
+}
