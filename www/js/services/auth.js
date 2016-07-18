@@ -84,7 +84,8 @@ app.factory('Auth', function($firebaseAuth,$firebaseObject,$state, $firebaseArra
    },
 
    getProfiles: function(){
-    return $firebaseArray(ref.child('stores'));
+    // display all dishes
+    return $firebaseArray(ref.child('dishes'));
    }
 
 
