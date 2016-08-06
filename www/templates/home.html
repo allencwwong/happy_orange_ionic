@@ -1,7 +1,40 @@
 <ion-view view-title="Home">
   <ion-content class="padding">
-    <div class="list card" ng-repeat="profile in home.profiles">
-      <div class="item item-name">{{profile.name}}</div>
+
+
+    <td-cards>
+
+      <td-card id="td-card" class="card-{{$index}}" 
+          ng-repeat="profile in home.profiles"
+          on-swipe-left="home.nope($index)"
+          on-swipe-right="home.like($index)">
+
+        <div class="item">
+          <h2>{{profile.name}}</h2>
+        </div>
+
+        <div class="image">
+
+          <div class="no-text">NOPE</div>
+          <img ng-src="{{profile.mainThumb}}">
+          <div class="yes-text">LIKE</div>
+        </div>
+
+         
+     
+      </td-card>
+    </td-cards>
+
+    <div class="row">
+          <div class="col col-50">
+          <button class="button button-block button-assertive icon icon-close" ng-click="home.nope(home.currentIndex)">Nope</button>
+          </div>
+
+          <div class="col col-50">
+          <button class="button button-block button-balanced icon icon-close" ng-click="home.like(home.currentIndex)">Like</button>
+        </div>
     </div>
+
+
   </ion-content> 
 </ion-view>
